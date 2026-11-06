@@ -12,17 +12,17 @@ TICKETS = [
 
 @app.route("/health")
 def health():
-    return jsonify({"status": "ok"}), 500
+    return jsonify({"status": "ok"}), 200
 
 
 @app.route("/version")
 def version():
-    return jsonify({"version": os.environ.get("APP_VERSION", "1.0.0")}), 500
+    return jsonify({"version": os.environ.get("APP_VERSION", "1.0.0")}), 200
 
 
 @app.route("/tickets")
 def tickets():
-    return jsonify(TICKETS), 500
+    return jsonify(TICKETS), 200
 
 
 if __name__ == "__main__":
